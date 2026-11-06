@@ -1,0 +1,11 @@
+[package]
+name = "daywright-media"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+daywright-domain.workspace = true
+daywright-proto.workspace = true
+daywright-providers.workspace = true
+tracing.workspace = true

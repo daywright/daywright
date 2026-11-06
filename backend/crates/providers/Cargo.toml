@@ -1,0 +1,11 @@
+[package]
+name = "daywright-providers"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+daywright-domain.workspace = true
+async-trait.workspace = true
+thiserror.workspace = true
+serde.workspace = true

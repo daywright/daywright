@@ -1,0 +1,44 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Rust
+backend/target/
+**/*.rs.bk
+
+# Device firmware (PlatformIO)
+devices/*/firmware/.pio/
+devices/*/firmware/wifi_config.h
+
+# Android
+apps/android/.gradle/
+apps/android/build/
+apps/android/app/build/
+apps/android/local.properties
+apps/android/.idea/
+apps/android/captures/
+*.apk
+*.keystore
+*.jks
+
+# iOS
+apps/ios/build/
+apps/ios/DerivedData/
+*.xcuserstate
+
+# Hardware tool noise
+devices/*/hardware/**/*-backups/
+devices/*/hardware/**/*.kicad_prl
+devices/*/hardware/**/fp-info-cache
+
+# OS and editor
+.DS_Store
+*.swp
+.vscode/
+
+# Local notes that never belong in the repository
+/private/

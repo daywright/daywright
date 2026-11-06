@@ -1,0 +1,33 @@
+# Licensing map for Daywright, in REUSE format (https://reuse.software).
+# The last table that matches a file wins. Reasoning: ADR-0011 in docs/decisions.md.
+version = 1
+
+# The brain, and anything not matched by a later table.
+[[annotations]]
+path = "**"
+SPDX-FileCopyrightText = "2026 The Daywright contributors"
+SPDX-License-Identifier = "AGPL-3.0-only"
+
+# Permissive: the device protocol, device firmware and the phone apps.
+[[annotations]]
+path = ["backend/crates/proto/**", "devices/*/firmware/**", "apps/**"]
+SPDX-FileCopyrightText = "2026 The Daywright contributors"
+SPDX-License-Identifier = "Apache-2.0"
+
+# Documentation, wherever it lives (hardware docs are covered by the next table).
+[[annotations]]
+path = ["**/*.md", "docs/**"]
+SPDX-FileCopyrightText = "2026 The Daywright contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Hardware designs and their documentation: boards and enclosures.
+[[annotations]]
+path = "devices/*/hardware/**"
+SPDX-FileCopyrightText = "2026 The Daywright contributors"
+SPDX-License-Identifier = "CERN-OHL-S-2.0"
+
+# Small configuration files.
+[[annotations]]
+path = [".gitignore", "**/.gitignore", "REUSE.toml", "**/*.example", ".github/**"]
+SPDX-FileCopyrightText = "2026 The Daywright contributors"
+SPDX-License-Identifier = "CC0-1.0"

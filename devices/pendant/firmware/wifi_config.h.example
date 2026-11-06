@@ -1,0 +1,9 @@
+// Copy to wifi_config.h (gitignored) and fill in. Used only when the pendant
+// joins Wi-Fi directly; otherwise the phone gateway relays the stream.
+#pragma once
+
+#define WIFI_SSID "your-network"
+#define WIFI_PASS "your-password"
+
+// Where to reach the gateway or backend session endpoint.
+#define DAYWRIGHT_SESSION_URL "ws://192.168.1.10:3000/v1/session"

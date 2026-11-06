@@ -1,0 +1,35 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/domain",
+    "crates/proto",
+    "crates/providers",
+    "crates/media",
+    "crates/api",
+]
+
+[workspace.package]
+version = "0.0.0"
+edition = "2021"
+license = "AGPL-3.0-only"
+authors = ["The Daywright contributors"]
+repository = ""
+
+[workspace.dependencies]
+# Internal crates
+daywright-domain = { path = "crates/domain" }
+daywright-proto = { path = "crates/proto" }
+daywright-providers = { path = "crates/providers" }
+daywright-media = { path = "crates/media" }
+
+# Shared third-party
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+async-trait = "0.1"
+thiserror = "1"
+anyhow = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+axum = { version = "0.7", features = ["ws"] }
+uuid = { version = "1", features = ["v4", "serde"] }

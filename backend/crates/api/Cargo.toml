@@ -1,0 +1,21 @@
+[package]
+name = "daywright-api"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "daywright-api"
+path = "src/main.rs"
+
+[dependencies]
+daywright-domain.workspace = true
+daywright-media.workspace = true
+daywright-providers.workspace = true
+tokio.workspace = true
+axum.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
